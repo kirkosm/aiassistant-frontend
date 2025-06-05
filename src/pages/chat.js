@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import styles from '../styles/Chat.module.css';
+import UserSettings from '../components/UserSettings';
 
 export default function ChatPage() {
     const router = useRouter();
@@ -133,7 +134,7 @@ export default function ChatPage() {
                         <option value="GPT-3.5">GPT-3.5</option>
                         <option value="Mixtral">Mixtral</option>
                     </select>
-                    <div className={styles.settings}>⚙️</div>
+                    <UserSettings />
                 </div>
 
                 <div className={styles.messages}>

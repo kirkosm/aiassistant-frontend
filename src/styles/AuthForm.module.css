@@ -1,19 +1,21 @@
 .formContainer {
-    max-width: 400px;
+    max-width: 420px;
     margin: 80px auto;
-    padding: 30px;
-    border-radius: 12px;
-    background: #ffffffcc;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     text-align: center;
-    font-family: sans-serif;
-    backdrop-filter: blur(6px);
+    font-family: 'Segoe UI', sans-serif;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
 .title {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #0070f3;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #0056c7;
 }
 
 .inputField {
@@ -21,39 +23,46 @@
     padding: 12px 14px;
     margin: 12px 0;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    background-color: #f9f9f9;
 }
 
+
 .inputField:focus {
-    border-color: #0070f3;
+    border-color: #0056c7;
+    box-shadow: 0 0 5px rgba(0, 86, 199, 0.4);
     outline: none;
+    background-color: #fff;
 }
 
 .submitButton {
     width: 100%;
-    padding: 12px;
-    margin-top: 16px;
-    background: #0070f3;
-    color: #fff;
-    font-weight: bold;
+    padding: 14px;
+    margin-top: 20px;
+    background: #0056c7;
+    color: #ffffff;
+    font-weight: 600;
     font-size: 1rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: background 0.2s ease-in-out;
 }
 
 .submitButton:hover {
-    background: #0051aa;
+    background: #003f95;
 }
 
 @media (max-width: 500px) {
     .formContainer {
-        margin: 40px 15px;
-        padding: 20px;
+        margin: 40px 16px;
+        padding: 24px;
     }
 
     .title {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 }

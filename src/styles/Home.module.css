@@ -1,56 +1,71 @@
+/* === PAGE CONTAINER === */
 .container {
+    position: fixed;
+    inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #e3f2fd, #fff);
-    font-family: sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+    overflow: hidden;
 }
 
+
+/* === CARD === */
 .card {
-    background: #ffffffcc;
-    padding: 32px 24px;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 36px 28px;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
     text-align: center;
-    max-width: 400px;
     width: 100%;
-    backdrop-filter: blur(8px);
+    max-width: 420px;
+    backdrop-filter: blur(10px);
+    border: none; /* αφαιρεί τυχόν μπλε περίγραμμα */
 }
 
+/* === TITLE === */
 .title {
     font-size: 2rem;
-    font-weight: bold;
-    color: #0070f3;
-    margin-bottom: 10px;
+    font-weight: 600;
+    color: #0056c7;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
+/* === SUBTITLE === */
 .subtitle {
     font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
+    color: #444;
+    margin-bottom: 28px;
+    line-height: 1.5;
 }
 
+/* === BUTTON GROUP === */
 .buttonGroup {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
+/* === LINK BUTTON === */
 .linkButton {
-    padding: 10px 20px;
-    background: #0070f3;
-    color: white;
-    border-radius: 10px;
+    padding: 12px 24px;
+    background: #0056c7;
+    color: #ffffff;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1rem;
+    transition: background 0.2s ease-in-out;
+    border: none;
 }
 
 .linkButton:hover {
-    background: #0051aa;
+    background: #003f95;
 }
