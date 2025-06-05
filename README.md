@@ -20,10 +20,7 @@ The application is built using React and communicates with the backend (aiassist
 
 ## Getting Started
 
-1. Clone the repository:
-
-   git clone https://github.com/your-username/aiassistant-frontend.git  
-   cd aiassistant-frontend
+1. Clone the repository
 
 2. Install dependencies:
 
@@ -32,9 +29,6 @@ The application is built using React and communicates with the backend (aiassist
 3. Run the development server:
 
    npm run dev
-
-The application will be available at:  
-http://localhost:5173
 
 ## Backend Integration
 
@@ -45,7 +39,3 @@ POST   /api/auth/login       -> User login
 POST   /api/chat/message     -> Send message to the AI and receive response
 
 Ensure that the backend server is running and accessible during frontend development.
-
-## Author
-
-Developed by Michalis as part of a full-stack portfolio project.
