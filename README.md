@@ -40,8 +40,8 @@ POST   /api/chat/message     -> Send message to the AI and receive response
 
 Ensure that the backend server is running and accessible during frontend development.
 
-![Login Page]([link](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Log%20in.png))
-![Settings]([link](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Settings.png))
-![Sign up]([link](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Sign%20up.png))
-![Welcome]([link](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Welcome!.png))
-![Chat]([link](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Chat.png))
+![Login Page](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Log%20in.png)
+![Settings](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Settings.png)
+![Sign Up](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Sign%20up.png)
+![Welcome](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Welcome!.png)
+![Chat](https://raw.githubusercontent.com/kirkosm/aiassistant-frontend/6b4af77507636781a845b1f956981b40cf3f018a/Chat.png)
