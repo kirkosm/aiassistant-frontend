@@ -5,36 +5,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #dbeafe, #f8fafc);
-    font-family: 'Segoe UI', sans-serif;
     padding: 20px;
     overflow: hidden;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+    font-family: 'Segoe UI', sans-serif;
 }
-
 
 /* === CARD === */
 .card {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 36px 28px;
-    border-radius: 18px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-    text-align: center;
     width: 100%;
     max-width: 420px;
+    padding: 36px 28px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 18px;
+    border: none;
     backdrop-filter: blur(10px);
-    border: none; /* αφαιρεί τυχόν μπλε περίγραμμα */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 /* === TITLE === */
 .title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #0056c7;
-    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0056c7;
+    margin-bottom: 12px;
 }
 
 /* === SUBTITLE === */
@@ -56,14 +55,14 @@
 /* === LINK BUTTON === */
 .linkButton {
     padding: 12px 24px;
-    background: #0056c7;
+    font-size: 1rem;
+    font-weight: 600;
     color: #ffffff;
+    background: #0056c7;
+    border: none;
     border-radius: 12px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
     transition: background 0.2s ease-in-out;
-    border: none;
 }
 
 .linkButton:hover {

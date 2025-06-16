@@ -4,10 +4,10 @@
     padding: 32px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     text-align: center;
     font-family: 'Segoe UI', sans-serif;
-    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
@@ -25,27 +25,26 @@
     border: 1px solid #ccc;
     border-radius: 12px;
     font-size: 1rem;
+    background-color: #f9f9f9;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
-    background-color: #f9f9f9;
 }
-
 
 .inputField:focus {
     border-color: #0056c7;
+    background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 86, 199, 0.4);
     outline: none;
-    background-color: #fff;
 }
 
 .submitButton {
     width: 100%;
     padding: 14px;
     margin-top: 20px;
-    background: #0056c7;
-    color: #ffffff;
-    font-weight: 600;
     font-size: 1rem;
+    font-weight: 600;
+    background: #0056c7;
+    color: #fff;
     border: none;
     border-radius: 12px;
     cursor: pointer;

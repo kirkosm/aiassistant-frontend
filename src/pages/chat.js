@@ -6,6 +6,7 @@ import UserSettings from '../components/UserSettings';
 
 export default function ChatPage() {
     const router = useRouter();
+
     const [threads, setThreads] = useState([]);
     const [selectedThreadId, setSelectedThreadId] = useState(null);
     const [messages, setMessages] = useState([]);
@@ -22,6 +23,7 @@ export default function ChatPage() {
 
     useEffect(() => {
         if (!userId) return;
+
         fetch(`http://localhost:8080/api/chat/threads?userId=${userId}`)
             .then((res) => res.json())
             .then(setThreads)
@@ -80,7 +82,9 @@ export default function ChatPage() {
 
     const deleteThread = async (threadId) => {
         try {
-            await fetch(`http://localhost:8080/api/chat/thread/${threadId}`, { method: 'DELETE' });
+            await fetch(`http://localhost:8080/api/chat/thread/${threadId}`, {
+                method: 'DELETE',
+            });
             setThreads((prev) => prev.filter((t) => t.id !== threadId));
             if (selectedThreadId === threadId) {
                 setSelectedThreadId(null);
@@ -141,7 +145,9 @@ export default function ChatPage() {
                     {messages.map((msg, i) => (
                         <div
                             key={i}
-                            className={msg.sender === 'user' ? styles.userMessage : styles.botMessage}
+                            className={
+                                msg.sender === 'user' ? styles.userMessage : styles.botMessage
+                            }
                         >
                             {msg.text}
                         </div>

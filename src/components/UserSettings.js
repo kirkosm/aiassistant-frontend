@@ -6,6 +6,7 @@ const UserSettings = () => {
     const [showModal, setShowModal] = useState(false);
     const [username, setUsername] = useState("michalis");
     const [email, setEmail] = useState("michalis@example.com");
+
     const menuRef = useRef(null);
     const buttonRef = useRef(null);
 
@@ -25,16 +26,15 @@ const UserSettings = () => {
             });
 
             if (!response.ok) throw new Error("Update failed");
-            alert("Changes saved ✅");
+
+            alert("Changes saved");
             setShowModal(false);
         } catch (err) {
-            alert("Something went wrong ❌");
+            alert("Something went wrong");
             console.error(err);
         }
     };
 
-
-    // Κλείσιμο μενού όταν κάνεις κλικ έξω
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (
@@ -45,6 +45,7 @@ const UserSettings = () => {
                 setShowMenu(false);
             }
         };
+
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
@@ -55,9 +56,10 @@ const UserSettings = () => {
         <>
             <div className={styles.container}>
                 <button
+                    ref={buttonRef}
                     className={styles.settings}
                     onClick={(e) => {
-                        e.stopPropagation(); // 👈 απαραίτητο
+                        e.stopPropagation();
                         setShowMenu(!showMenu);
                     }}
                     title="User settings"
@@ -67,10 +69,7 @@ const UserSettings = () => {
             </div>
 
             {showMenu && (
-                <div
-                    className={styles.menu}
-                    onClick={(e) => e.stopPropagation()}
-                >
+                <div ref={menuRef} className={styles.menu} onClick={(e) => e.stopPropagation()}>
                     <p><strong>Username:</strong> {username}</p>
                     <p><strong>Email:</strong> {email}</p>
                     <button className={styles.editBtn} onClick={() => setShowModal(true)}>Edit</button>
@@ -80,10 +79,7 @@ const UserSettings = () => {
 
             {showModal && (
                 <div className={styles.modalOverlay} onClick={() => setShowModal(false)}>
-                    <div
-                        className={styles.modal}
-                        onClick={(e) => e.stopPropagation()}
-                    >
+                    <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
                         <h3>Edit Profile</h3>
                         <input
                             type="text"
@@ -106,7 +102,6 @@ const UserSettings = () => {
             )}
         </>
     );
-
 };
 
 export default UserSettings;

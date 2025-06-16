@@ -2,6 +2,7 @@
     position: relative;
 }
 
+/* === Settings Button (⚙️) === */
 .settings {
     font-size: 24px;
     color: #333;
@@ -22,20 +23,19 @@
     background: #c7d2fe;
 }
 
+/* === Dropdown Menu === */
 .menu {
     position: absolute;
-    top: 40px; /* όσο ύψος έχει το ⚙️ + λίγα px περιθώριο */
-    right: 80px; /* μένει ευθυγραμμισμένο δεξιά */
+    top: 40px;
+    right: 80px;
+    min-width: 220px;
+    padding: 16px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    min-width: 220px;
     z-index: 100;
     animation: fadeIn 0.2s ease-in-out;
 }
-
-
 
 .menu p {
     margin: 8px 0;
@@ -48,9 +48,9 @@
     width: 100%;
     margin-top: 10px;
     padding: 10px;
+    font-weight: 500;
     border: none;
     border-radius: 10px;
-    font-weight: 500;
     cursor: pointer;
 }
 
@@ -72,12 +72,7 @@
     background: #d32f2f;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* === Modal Styles === */
+/* === Modal Overlay === */
 .modalOverlay {
     position: fixed;
     top: 0;
@@ -91,12 +86,13 @@
     z-index: 999;
 }
 
+/* === Modal Window === */
 .modal {
-    background: white;
+    width: 300px;
     padding: 24px;
+    background: white;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -109,9 +105,9 @@
 
 .modal input {
     padding: 10px 12px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 14px;
 }
 
 .modalButtons {
@@ -122,10 +118,10 @@
 
 .modalButtons button {
     padding: 8px 14px;
+    font-weight: 500;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: 500;
     background: #4a90e2;
     color: white;
 }
@@ -133,4 +129,16 @@
 .modalButtons button:last-child {
     background: #ccc;
     color: #333;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
